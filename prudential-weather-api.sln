@@ -4,8 +4,27 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "prudential-weather-api", "prudential-weather-api\prudential-weather-api.csproj", "{1237B846-95F9-424A-938C-88EBD5F0DDC2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{858A6E61-8594-41C5-8F5C-21BD8206A448} = {858A6E61-8594-41C5-8F5C-21BD8206A448}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "prudential-weather-api.Tests", "prudential-weather-api.Tests\prudential-weather-api.Tests.csproj", "{06F87786-E84A-4644-BCF8-B8E08DA0C437}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "prudential-weather-api.business", "prudential-weather-api.business\prudential-weather-api.business.csproj", "{858A6E61-8594-41C5-8F5C-21BD8206A448}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F640BC93-EBE1-4068-9479-3467CE057110} = {F640BC93-EBE1-4068-9479-3467CE057110}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "prudential-weather-api.repository", "prudential-weather-api.repository\prudential-weather-api.repository.csproj", "{F640BC93-EBE1-4068-9479-3467CE057110}"
+	ProjectSection(ProjectDependencies) = postProject
+		{00C24706-D1C3-48C5-861F-4A1E44934B7D} = {00C24706-D1C3-48C5-861F-4A1E44934B7D}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "prudential-weather-api.test", "prudential-weather-api.test\prudential-weather-api.test.csproj", "{F4EED33F-8CEE-41B6-A119-5870265B3E33}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1237B846-95F9-424A-938C-88EBD5F0DDC2} = {1237B846-95F9-424A-938C-88EBD5F0DDC2}
+		{858A6E61-8594-41C5-8F5C-21BD8206A448} = {858A6E61-8594-41C5-8F5C-21BD8206A448}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "prudential-weather-api.common", "prudential-weather-api.common\prudential-weather-api.common.csproj", "{00C24706-D1C3-48C5-861F-4A1E44934B7D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +36,22 @@ Global
 		{1237B846-95F9-424A-938C-88EBD5F0DDC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1237B846-95F9-424A-938C-88EBD5F0DDC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1237B846-95F9-424A-938C-88EBD5F0DDC2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{06F87786-E84A-4644-BCF8-B8E08DA0C437}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{06F87786-E84A-4644-BCF8-B8E08DA0C437}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{06F87786-E84A-4644-BCF8-B8E08DA0C437}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{06F87786-E84A-4644-BCF8-B8E08DA0C437}.Release|Any CPU.Build.0 = Release|Any CPU
+		{858A6E61-8594-41C5-8F5C-21BD8206A448}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{858A6E61-8594-41C5-8F5C-21BD8206A448}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{858A6E61-8594-41C5-8F5C-21BD8206A448}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{858A6E61-8594-41C5-8F5C-21BD8206A448}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F640BC93-EBE1-4068-9479-3467CE057110}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F640BC93-EBE1-4068-9479-3467CE057110}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F640BC93-EBE1-4068-9479-3467CE057110}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F640BC93-EBE1-4068-9479-3467CE057110}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4EED33F-8CEE-41B6-A119-5870265B3E33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4EED33F-8CEE-41B6-A119-5870265B3E33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4EED33F-8CEE-41B6-A119-5870265B3E33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4EED33F-8CEE-41B6-A119-5870265B3E33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00C24706-D1C3-48C5-861F-4A1E44934B7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00C24706-D1C3-48C5-861F-4A1E44934B7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00C24706-D1C3-48C5-861F-4A1E44934B7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00C24706-D1C3-48C5-861F-4A1E44934B7D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
