@@ -27,6 +27,18 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "prudential-weather-api.test
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "prudential-weather-api.common", "prudential-weather-api.common\prudential-weather-api.common.csproj", "{00C24706-D1C3-48C5-861F-4A1E44934B7D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D81C3BF9-D279-4FDD-A99A-FF73854C402B}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Desktop\prudential-weather-api.postman_collection.json = ..\..\..\Desktop\prudential-weather-api.postman_collection.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample Response", "Sample Response", "{368E69B0-AB08-4C23-A44D-1F70712C28BF}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\..\WeatherLog\Delhi_20190513.json = ..\..\..\..\..\WeatherLog\Delhi_20190513.json
+		..\..\..\..\..\WeatherLog\Mumbai_20190513.json = ..\..\..\..\..\WeatherLog\Mumbai_20190513.json
+		..\..\..\..\..\WeatherLog\Paris_20190513.json = ..\..\..\..\..\WeatherLog\Paris_20190513.json
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -56,6 +68,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{368E69B0-AB08-4C23-A44D-1F70712C28BF} = {D81C3BF9-D279-4FDD-A99A-FF73854C402B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {401F0046-0C6A-4021-B17F-0EFB29543C59}

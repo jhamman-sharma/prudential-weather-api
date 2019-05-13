@@ -118,7 +118,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Output\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\prudential-weather-api.business\prudential-weather-api.business.csproj">
