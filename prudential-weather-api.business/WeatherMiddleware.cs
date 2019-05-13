@@ -1,7 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
+using Newtonsoft.Json.Linq;
 using prudential_weather_api.business.Model;
+using prudential_weather_api.common;
 using prudential_weather_api.repository;
 using Entities = prudential_weather_api.repository.Entities;
 
@@ -31,9 +34,22 @@ namespace prudential_weather_api.business
                 var response = openWeatherServiceRepository.GetWeather(city.Id);          
                 citiesWeather.Add(response);
             }
-            var result  = await Task.WhenAll(citiesWeather);
-            return mapper.Map<IList<OpenWeather>>(result);
+            var finalResponse  = await Task.WhenAll(citiesWeather);
+            var result = mapper.Map<IList<OpenWeather>>(finalResponse);
+            SaveResult(result);
+            return result;
         }
+
+        private void SaveResult(IList<OpenWeather> weathers)
+        {
+            foreach (var city in weathers)
+            {
+                var json = (JObject)JToken.FromObject(city);
+                var filename = $"{city.name}";
+                FileStorage.StoreJSONFile(json, filename+"_"+DateTime.Now.ToString("yyyyMMdd"));
+            }
+        }
+
 
     }
 }

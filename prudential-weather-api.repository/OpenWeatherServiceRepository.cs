@@ -1,6 +1,6 @@
-﻿using prudential_weather_api.common;
+﻿using System.Threading.Tasks;
+using prudential_weather_api.common;
 using prudential_weather_api.repository.Entities;
-using System.Threading.Tasks;
 
 namespace prudential_weather_api.repository
 {
